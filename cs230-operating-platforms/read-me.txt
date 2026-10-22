@@ -1,0 +1,23 @@
+Q1. Briefly summarize The Gaming Room client and their software requirements. Who was the client? What type of software did they want you to design?
+
+A1. The client was The Gaming Room. They wanted to expand Draw It or Lose It from an Android application into a web-based game that players could access from different operating systems. The design needed to support multiple games, teams, and players, with unique identifiers and rules for names. Each game has four one-minute rounds, timed drawing reveals, and additional chances for remaining teams to guess.
+
+Q2. What did you do particularly well in developing this documentation?
+
+A2. I think I did well explaining how the main game objects fit together. The document shows how the GameService manages games, how games contain teams, and how teams contain players. I also clarified that a singleton GameService can manage multiple games, and pointed out questions the client still needs to answer, such as whether team names must be unique across the whole application.
+
+Q3. What about the process of working through a design document did you find helpful when developing the code?
+
+A3. Working through the design helped me connect the client’s requirements to the classes and methods the application would need. Defining the relationships between games, teams, and players first made it easier to see where operations such as adding a team or assigning an ID belong.
+
+Q4. If you could choose one part of your work on these documents to revise, what would you pick? How would you improve it?
+
+A4. I would revise the Memory Management recommendation. It explains how Linux and Java manage memory, but it could connect that information more directly to the game’s image library and games. I would add that the application should keep the full image collection in persistent storage and load only the images needed for active games into memory.
+
+Q5. How did you interpret the user’s needs and implement them into your software design? Why is it so important to consider the user’s needs when designing?
+
+A5. I interpreted the client’s needs as a cross-platform game with shared rules and game information. I proposed a browser interface connected to a Java server, with the server managing game state, validating guesses, and controlling round deadlines. I also included persistent storage for game information and considered how players could reconnect after a network interruption. Considering user needs matters because the design has to support how people will actually play. If certain aspects regarding software design and development are overlooked, the software may not work reliably for the client’s intended use.
+
+Q6. How did you approach designing software? What techniques or strategies would you use in the future to analyze and design a similar software application?
+
+A6. I started by identifying the client’s requirements and constraints, then organized the main objects and their relationships in a domain model. I considered how the application would handle various aspects like platform access, requests, timing, storage, networking, and security. For a similar project, I would clarify ambiguous requirements with the client early, separate functional requirements from performance and security needs, and map each requirement to the architecture, data model, and tests.
